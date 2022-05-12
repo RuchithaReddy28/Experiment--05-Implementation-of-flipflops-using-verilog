@@ -101,12 +101,15 @@ From the above characteristic table, we can directly write the next state equati
 Q(t+1)=T′Q(t)+TQ(t)′
 ⇒Q(t+1)=T⊕Q(t)
 
-### Procedure
-/* write all the steps invloved */
+### Procedure:
+1.Open Quartus II and select new project and choose the file location.
+2.Module Declaration. Module should have the file name.
+3.Declare Inputs and outputs.
+4.Use assign declaration and wire to define the functionality of logic circuits.
+5.End the program with endmodule.
+6.Run the program and choose RTL viewer to get RTL realization.
 
-
-
-### PROGRAM 
+### PROGRAM: 
 /*
 
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
@@ -117,23 +120,80 @@ RegisterNumber:21222123004
 
 */
 
-### RTL LOGIC FOR FLIPFLOPS 
+### RTL LOGIC FOR FLIPFLOPS:
+## SR Flipflop:
+```
+module sr (s,r,clk,Q,Qbar);
+input s,r,clk;
+output Q,Qbar;
+wire x,y;
+nand (x,s,clk);
+nand (y,r,clk);
+nand(Q,x,Qbar);
+nand (Qbar,y,Q);
+endmodule
+```
+## Output:
+![output](?raw=true)
 
+## Timing Diagram:
+![output](?raw=true)
 
+## JK Flipflop:
+```
+module jk(q,qbar,k,j,clk);
+input j,k,clk;
+output q,qbar;
+wire nand1_out;
+wire nand2_out;
+nand(nand1_out,j,clk,qbar);
+nand(nand2_out,k,clk,q);
+nand(q,nand1_out,qbar,qbar);
+nand(qbar,nand2_out,q);
+endmodule
+```
+## Output:
+![output](?raw=true)
 
+## Timing Diagram:
+![output](?raw=true)
 
+## DF Flipflop:
+```
+module DF(d,clock,q,qbar);
+input d,clock;
+output q,qbar;
+assign dbar=!d;
+wire x,y;
+nand(x,d,clock);
+nand(y,dbar,clock);
+nand(q,x,qbar);
+nand(qbar,y,q);
+endmodule
+```
+## Output:
+![output](?raw=true)
 
+## Timing Diagram:
+![output](?raw=true)
 
+## TF Flipflop:
+```
+module tf(t,qbar,q,clk);
+input t,clk;
+output q,qbar;
+wire n1,n2;
+nand(n1,t,clk,qbar);
+nand(n2,clk,t,q);
+nand(q,n1,qbar);
+nand(qbar,n2,q);
+endmodule
+```
+## Output:
+![output](?raw=true)
 
+## Timing Diagram:
+![output](?raw=true)
 
-
-### TIMING DIGRAMS FOR FLIP FLOPS 
-
-
-
-
-
-
-
-
-### RESULTS 
+### RESULTS:
+All the flipflops are implemented using verilog and their functionality has been validated using functional tables.
