@@ -134,10 +134,10 @@ nand (Qbar,y,Q);
 endmodule
 ```
 ## Output:
-![output](?raw=true)
+![output](https://github.com/RuchithaReddy28/Experiment--05-Implementation-of-flipflops-using-verilog/blob/main/sr%20im.PNG?raw=true)
 
 ## Timing Diagram:
-![output](?raw=true)
+![output](https://github.com/RuchithaReddy28/Experiment--05-Implementation-of-flipflops-using-verilog/blob/main/sr%20timing.png?raw=true)
 
 ## JK Flipflop:
 ```
@@ -153,10 +153,10 @@ nand(qbar,nand2_out,q);
 endmodule
 ```
 ## Output:
-![output](?raw=true)
+![output](https://github.com/RuchithaReddy28/Experiment--05-Implementation-of-flipflops-using-verilog/blob/main/jk.png?raw=true)
 
 ## Timing Diagram:
-![output](?raw=true)
+![output](https://github.com/RuchithaReddy28/Experiment--05-Implementation-of-flipflops-using-verilog/blob/main/jk%20timing.png?raw=true)
 
 ## DF Flipflop:
 ```
@@ -172,10 +172,10 @@ nand(qbar,y,q);
 endmodule
 ```
 ## Output:
-![output](?raw=true)
+![output](https://github.com/RuchithaReddy28/Experiment--05-Implementation-of-flipflops-using-verilog/blob/main/dk%20im.PNG?raw=true)
 
 ## Timing Diagram:
-![output](?raw=true)
+![output](https://github.com/RuchithaReddy28/Experiment--05-Implementation-of-flipflops-using-verilog/blob/main/df%20timing.png?raw=true)
 
 ## TF Flipflop:
 ```
@@ -190,10 +190,10 @@ nand(qbar,n2,q);
 endmodule
 ```
 ## Output:
-![output](?raw=true)
+![output](https://github.com/RuchithaReddy28/Experiment--05-Implementation-of-flipflops-using-verilog/blob/main/tf.png?raw=true)
 
 ## Timing Diagram:
-![output](?raw=true)
+![output](https://github.com/RuchithaReddy28/Experiment--05-Implementation-of-flipflops-using-verilog/blob/main/tf%20timing.png?raw=true)
 
 ### RESULTS:
 All the flipflops are implemented using verilog and their functionality has been validated using functional tables.
